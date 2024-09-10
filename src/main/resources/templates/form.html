@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+</head>
+<body>
+    <form th:action="@{/add}" th:object="${contact}" method="post">
+        <div>
+            <label for="name">nom</label>
+            <input id="name" type="text" th:field="*{name}">
+        </div>
+        <div>
+            <label for="age">age</label>
+            <input id="age" type="number" th:field="*{age}">
+        </div>
+        <div>
+            <label for="phone">phone</label>
+            <input id="phone" type="text" th:field="*{phone}">
+        </div>
+        <button>bali</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul th:if="${contacts != null}">
+    <li th:each="c : ${contacts}">
+        <a th:href="@{/detail/{id}(id=${c.getId()})}"><span th:text="${c.getName()}"></span> </a>
+    </li>
+</ul>
+<!--    <p th:each="contact  : ${contacts}">-->
+<!--        <span th:text="${contact.getName()}"></span>-->
+<!--        <span th:text="${contact.getAge()()}"></span>-->
+<!--        <span th:text="${contact.getPhone()()}"></span>-->
+<!--        <button><a th:href="@{/?id=contact.getId()}">plus d'info</a> </button>-->
+<!--    </p>-->
+</body>
+</html>
